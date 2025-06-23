@@ -5,7 +5,6 @@ const questions = [
   { question: "2. CSS-də rəng təyin etmək üçün istifadə olunan xüsusiyyət hansıdır?", answer: "color" },
   { question: "3. JavaScript-də dəyişən təyin etmək üçün istifadə olunan açar söz hansıdır?", answer: "let" },
   { question: "4. React komponentləri hansı fayl uzantısında yazılır?", answer: "jsx" },
-  { question: "5. Tailwind-də 'font-bold' nə üçündür?", answer: "qalın mətn" },
 ];
 const states = {
   IDLE: "idle",
@@ -37,7 +36,7 @@ const App = () => {
     }else if(state === states.ASKING){
       setState(states.CHECKING);
       if(value===questions[currentQuestion].answer.toLowerCase()){
-        sendToConsole(" Doğrudur! \n");
+        sendToConsole(" Doğrudur! Tebriklerr\n");
         
       }else {
         sendToConsole(`Yanlışdır ! Dogru cavab "${questions[currentQuestion].answer}"  \n`)
@@ -70,7 +69,7 @@ const App = () => {
 
 
   return (
-    <div className="flex flex-col  justify-self-center p-2 bg-black text-white w-[50%] h-[80vh] rounded ">
+    <div className="flex flex-col   justify-self-center p-2 bg-black text-white w-[50%] h-[80vh] rounded ">
       <p>{'>>Başlamaq üçün "Start" yazın.'}</p>
      
         <p className="whitespace-pre-line mb-[10px] overflow-y-auto max-h-[80vh]">{`${consoleText}`}</p>
